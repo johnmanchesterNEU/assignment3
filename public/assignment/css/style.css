@@ -46,3 +46,7 @@ ul.borderless li{
 .link:hover {
     text-decoration: none;
 }
+
+.bold {
+    font-weight: normal;
+}
