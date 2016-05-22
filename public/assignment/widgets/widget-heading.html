@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Widget Heading</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 </head>
 <body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <a href="widget-chooser.html" class="navbar-text navbar-link pull-left">
+                  <span class="glyphicon glyphicon-chevron-left">
+                  </span>
+        </a>
+        <a class="navbar-brand pull-left" href="#">
+            Edit Page
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <form>
+        <div class="form-group">
+            <label for="widget-name">Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="widget-name"
+                   value="Name"
+                   placeholder="Widget Name">
+        </div>
+        <div class="form-group">
+            <label for="widget-text">Title</label>
+            <input type="text"
+                   class="form-control"
+                   id="widget-text"
+                   value="Text"
+                   placeholder="Widget Text">
+        </div>
+        <div class="form-group">
+            <label for="widget-size">Size</label>
+            <input type="number"
+                   class="form-control"
+                   id="widget-size"
+                   min="1"
+                   max="7"
+                   value="1"
+                   placeholder="1">
+        </div>
+    </form>
+
+    <a class="btn btn-danger  btn-block"
+       href="website-list.html">Delete</a>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <a href="#" class="navbar-text navbar-link pull-left">
+            <span class="glyphicon glyphicon-share-alt"></span>
+        </a>
+        <a href="#" class="navbar-center pull-right">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </div>
+</nav>
 
 </body>
 </html>

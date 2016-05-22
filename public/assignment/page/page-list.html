@@ -1,83 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable=no"/>
-    <title>Page List</title>
+    <title>Page Lisr</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 </head>
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                Fixed Top
-            </a>
-            <p class="navbar-text pull-right">
-                <a href="#" class="navbar-link">
-          <span class="glyphicon glyphicon-ok">
-          </span>
-                </a>
-            </p>
-        </div>
+    <div class="container">
+        <a href="../website/website-list.html" class="navbar-text navbar-link pull-left">
+                  <span class="glyphicon glyphicon-chevron-left">
+                  </span>
+        </a>
+        <a class="navbar-brand pull-left" href="#">
+            Pages
+        </a>
+        <a href="page-list.html" class="navbar-text navbar-link pull-right">
+                  <span class="glyphicon glyphicon-plus">
+                  </span>
+        </a>
     </div>
 </nav>
 
-
 <div class="container">
-    <h1>Profile</h1>
-
-    <form>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Username">
-        </div>
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="alice@wonderland.com">
-        </div>
-        <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" class="form-control" id="first-name" placeholder="Alice">
-        </div>
-        <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" class="form-control" id="last-name" placeholder="Wonderland">
-        </div>
-    </form>
-
-    <a class="btn btn-primary btn-block"
-       href="./assignment/website/website-list.html">Websites</a>
-    <a class="btn btn-danger  btn-block"
-       href="login.html">Logout</a>
+    <ul class="list-group borderless">
+        <li class="list-group-item">
+            <a href="../widgets/widget-list.html">
+                Blogging Post
+            </a>
+            <a href="page-edit.html" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.html">
+                Blogs
+            </a>
+            <a href="page-edit.html" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.html">
+                Home
+            </a>
+            <a href="page-edit.html" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.html">
+                About
+            </a>
+            <a href="page-edit.html" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.html">
+                Contact Us
+            </a>
+            <a href="page-edit.html" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
-        <div class="row navbar-text">
-            <div class="col-xs-3 text-center">
-                <a href="#">
-                    <span class="glyphicon glyphicon-ok"></span>
-                </a>
-            </div>
-            <div class="col-xs-3 text-center">
-                <a href="#">
-                    <span class="glyphicon glyphicon-plus"></span>
-                </a>
-            </div>
-            <div class="col-xs-3 text-center">
-                <a href="#">
-                    <span class="glyphicon glyphicon-star"></span>
-                </a>
-            </div>
-            <div class="col-xs-3 text-center">
-                <a href="#">
-                    <span class="glyphicon glyphicon-heart"></span>
-                </a>
-            </div>
-        </div>
+        <a class="navbar-center pull-right" href="/assignment/user/profile.html">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
     </div>
 </nav>
 

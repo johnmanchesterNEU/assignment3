@@ -4,6 +4,7 @@ input.form-control {
 
 body {
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 p.navbar-text.pull-right {
@@ -22,4 +23,26 @@ p.navbar-text.pull-left {
     padding-bottom: 5px;
     border-bottom-left-radius: 8px;
     opacity: 0.7;
+}
+
+.vid {
+    z-index: inherit;
+}
+
+.up-vid {
+    z-index: 999;
+}
+
+
+.navbar-center{
+    padding-bottom: 15px;
+    padding-top: 15px
+}
+
+ul.borderless li{
+    border: none;
+}
+
+.link:hover {
+    text-decoration: none;
 }
