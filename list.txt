@@ -1,0 +1,58 @@
+ng-submit="submitForm(model.isValid)"
+          ng-controller="RegisterController"
+          novalidate
+		  
+		  
+		  
+ <li class="list-group-item">
+            <a href="../page/page-list.view.client.html">
+                Blogging App
+            </a>
+            <span class="pull-right">
+                <a href="website-edit.view.client.html" class="link">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-play"></span>
+                </a>
+            </span>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.view.client.html">
+                Address Book
+            </a>
+            <span class="pull-right">
+                <a href="website-edit.view.client.html" class="link">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-play"></span>
+                </a>
+            </span>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.view.client.html">
+                Script Testing
+            </a>
+            <span class="pull-right">
+                <a href="website-edit.view.client.html" class="link">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-play"></span>
+                </a>
+            </span>
+        </li>
+        <li class="list-group-item">
+            <a href="../page/page-list.view.client.html">
+                Blogger
+            </a>
+            <span class="pull-right">
+                <a href="website-edit.view.client.html" class="link">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-play"></span>
+                </a>
+            </span>
+        </li>

@@ -50,3 +50,7 @@ ul.borderless li{
 .bold {
     font-weight: normal;
 }
+
+.hand{
+    cursor: pointer;
+}

@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet"/>
-</head>
-<body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-        <a href="website-list.html" class="navbar-text navbar-link pull-left">
+        <a href="website-list.view.client.html" class="navbar-text navbar-link pull-left">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
         </a>
         <a class="navbar-brand pull-left" href="#">
             Edit Website
         </a>
-        <a href="website-list.html" class="navbar-text navbar-link pull-right">
+        <a href="/user/{{model.userId}}/website/new" class="navbar-text navbar-link pull-right">
                   <span class="glyphicon glyphicon-ok">
                   </span>
         </a>
@@ -48,7 +35,7 @@
     </form>
 
     <a class="btn btn-danger  btn-block"
-       href="website-list.html">Delete</a>
+       href="website-list.view.client.html">Delete</a>
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -56,11 +43,8 @@
         <a href="#" class="navbar-text navbar-link pull-left">
             <span class="glyphicon glyphicon-share-alt"></span>
         </a>
-        <a href="../user/profile.html" class="navbar-center pull-right">
+        <a href="../user/profile.view.client.html" class="navbar-center pull-right">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </div>
 </nav>
-
-</body>
-</html>

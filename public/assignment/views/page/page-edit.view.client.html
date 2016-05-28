@@ -5,7 +5,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
     <meta charset="UTF-8">
-    <title>New Page</title>
+    <title>Edit Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../css/style.css" rel="stylesheet"/>
 </head>
@@ -13,14 +13,14 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <a href="page-list.html" class="navbar-text navbar-link pull-left">
+        <a href="page-list.view.client.html" class="navbar-text navbar-link pull-left">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
         </a>
         <a class="navbar-brand pull-left" href="#">
-            New Page
+            Edit Page
         </a>
-        <a href="page-list.html" class="navbar-text navbar-link pull-right">
+        <a href="page-list.view.client.html" class="navbar-text navbar-link pull-right">
                   <span class="glyphicon glyphicon-ok">
                   </span>
         </a>
@@ -35,6 +35,7 @@
             <input type="text"
                    class="form-control"
                    id="page-name"
+                   value="Blog Post"
                    placeholder="Page Name">
         </div>
         <div class="form-group">
@@ -42,10 +43,13 @@
             <input type="text"
                    class="form-control"
                    id="page-title"
+                   value="Blog Title"
                    placeholder="Page Title">
         </div>
     </form>
 
+    <a class="btn btn-danger  btn-block"
+       href="page-list.view.client.html">Delete</a>
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -53,7 +57,7 @@
         <a href="#" class="navbar-text navbar-link pull-left">
             <span class="glyphicon glyphicon-share-alt"></span>
         </a>
-        <a href="../user/profile.html" class="navbar-center pull-right">
+        <a href="../user/profile.view.client.html" class="navbar-center pull-right">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </div>
