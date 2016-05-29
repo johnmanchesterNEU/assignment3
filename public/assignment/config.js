@@ -50,6 +50,24 @@
                 title: "Widget List",
                 controllerAs: "model"
             })
+            .when("/user/:uid/website/:wid/page", {
+                templateUrl: "views/page/page-list.view.client.html",
+                controller: "PageListController",
+                title: "Page List",
+                controllerAs: "model"
+            })
+            .when("/user/:uid/website/:wid/page-edit/:pid", {
+                templateUrl: "views/page/page-edit.view.client.html",
+                controller: "PageEditController",
+                title: "Page Edit",
+                controllerAs: "model"
+            })
+            .when("/user/:uid/website/:wid/page-new/", {
+                templateUrl: "views/page/page-new.view.client.html",
+                controller: "PageNewController",
+                title: "New Page",
+                controllerAs: "model"
+            })
             .otherwise({
                 redirectTo: "/login"
             });

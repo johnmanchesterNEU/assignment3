@@ -1,78 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
-    <meta charset="UTF-8">
-    <title>Page Lisr</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet"/>
-</head>
-<body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <a href="../views/website/website-list.html" class="navbar-text navbar-link pull-left">
+        <a href="#/user/{{model.uid}}/website" class="navbar-text navbar-link pull-left">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
         </a>
-        <a class="navbar-brand pull-left" href="#">
+        <a class="navbar-brand pull-left">
             Pages
         </a>
-        <a href="page-new.view.client.html" class="navbar-text navbar-link pull-right">
+        <a href="#/user/{{model.uid}}/website/{{model.wid}}/page-new/"
+           class="navbar-text navbar-link pull-right">
                   <span class="glyphicon glyphicon-plus">
                   </span>
         </a>
     </div>
 </nav>
-
 <div class="container">
     <ul class="list-group borderless">
-        <li class="list-group-item">
+        <li ng-repeat="page in model.pages"
+            class="list-group-item">
             <a href="../views/widgets/widget-list.html"
                class="navbar-link bold">
-                Blogging Post
+                {{page.name}}
             </a>
-            <a href="page-edit.view.client.html" class="pull-right">
+            <a href="#/user/{{model.uid}}/website/{{model.wid}}/page-edit/{{page._id}}" class="pull-right">
                 <span class="glyphicon glyphicon-cog"></span>
             </a>
         </li>
-        <li class="list-group-item">
-            <a href="../views/widgets/widget-list.html"
-               class="navbar-link bold">
-                Blogs
-            </a>
-            <a href="page-edit.view.client.html" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="../views/widgets/widget-list.html"
-               class="navbar-link bold">
-                Home
-            </a>
-            <a href="page-edit.view.client.html" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="../views/widgets/widget-list.html"
-               class="navbar-link bold">
-                About
-            </a>
-            <a href="page-edit.view.client.html" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="../views/widgets/widget-list.html"
-               class="navbar-link bold">
-                Contact Us
-            </a>
-            <a href="page-edit.view.client.html" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
         </li>
     </ul>
 </div>
@@ -84,6 +37,3 @@
         </a>
     </div>
 </nav>
-
-</body>
-</html>

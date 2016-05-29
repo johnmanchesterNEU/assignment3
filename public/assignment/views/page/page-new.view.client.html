@@ -1,45 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
-    <meta charset="UTF-8">
-    <title>New Page</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet"/>
-</head>
-<body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <a href="page-list.view.client.html" class="navbar-text navbar-link pull-left">
+        <a href="#/user/{{model.uid}}/website/{{model.wid}}/page" class="navbar-text navbar-link pull-left">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
         </a>
-        <a class="navbar-brand pull-left" href="#">
+        <a class="navbar-brand pull-left">
             New Page
         </a>
-        <a href="page-list.view.client.html" class="navbar-text navbar-link pull-right">
+        <a ng-click="model.createPage(model.name, model.title)"
+           class="navbar-text navbar-link pull-right hand">
                   <span class="glyphicon glyphicon-ok">
                   </span>
         </a>
     </div>
 </nav>
-
+<div class="alert  alert-danger alert-dismissible"
+     ng-if="model.success"
+     role="alert">
+    <button ng-click="model.close()"
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"></button>
+    <span aria-hidden="true">&times;</span></button>
+    {{model.error}}
+</div>
 <div class="container">
 
     <form>
         <div class="form-group">
             <label for="page-name">Name</label>
-            <input type="text"
+            <input ng-model="model.name"
+                   type="text"
                    class="form-control"
                    id="page-name"
                    placeholder="Page Name">
         </div>
         <div class="form-group">
             <label for="page-title">Title</label>
-            <input type="text"
+            <input ng-model="model.title"
+                   type="text"
                    class="form-control"
                    id="page-title"
                    placeholder="Page Title">
@@ -50,14 +50,11 @@
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
-        <a href="#" class="navbar-text navbar-link pull-left">
+        <a  class="navbar-text navbar-link pull-left">
             <span class="glyphicon glyphicon-share-alt"></span>
         </a>
-        <a href="../user/profile.view.client.html" class="navbar-center pull-right">
+        <a href="#/profile/{{model.uid}}" class="navbar-center pull-right">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </div>
 </nav>
-
-</body>
-</html>

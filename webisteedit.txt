@@ -1,34 +1,66 @@
+"/user/:uid/website/:wid/page", 
+
+
+(function(){
+    angular
+        .module("WebAppMaker")
+        .controller("WebsiteListController", WebsiteListController);
+
+    function WebsiteListController($routeParams, WebsiteService) {
+        var vm = this;
+        vm.userId = $routeParams.userId;
+        vm.profile = profile;
+        vm.newWebsite = newWebsite;
+
+        vm.web = WebsiteService.websites;
+
+        function init() {
+            vm.websites = WebsiteService.findWebsitesForUserId(vm.userId);
+        }
+        init();
+
+        function profile(){
+            $location.url("/profile/"+vm.userId);
+        }
+
+        function newWebsite() {
+            $location.url("/profile/"+vm.userId);
+        }
+
+        function  page(pageId) {
+            $location.url("/page/"+pageId);
+        }
+    }
+})();
+
+
+
+
+
+
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-        <a href="#/user/{{model.userId}}/website" class="navbar-text navbar-link pull-left">
+        <a href="website-list.view.client.html" class="navbar-text navbar-link pull-left">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
         </a>
-        <a class="navbar-brand pull-left">
+        <a class="navbar-brand pull-left" href="#">
             Edit Website
         </a>
-        <a ng-click="model.updateWebsite(model.website.name,model.website.description)"
+        <a ng-click="model.editWebsite(model.name,model.description)"
            class="navbar-text navbar-link pull-right hand">
             <span class="glyphicon glyphicon-ok"></span>
         </a>
     </div>
 </nav>
-<div class="alert  alert-danger alert-dismissible"
-     ng-if="model.success"
-     role="alert">
-    <button ng-click="model.close()"
-            type="button"
-            class="close"
-            data-dismiss="alert"
-            aria-label="Close"/>
-    <span aria-hidden="true">&times;</span></button>
-    {{model.error}}
-</div>
+{{model.userId}}
 <div class="container">
+
     <form>
         <div class="form-group">
             <label for="website-name">Website Name</label>
-            <input ng-model="model.website.name"
+            <input ng-model="model.name"
                    type="text"
                    class="form-control"
                    id="website-name"
@@ -36,7 +68,7 @@
         </div>
         <div class="form-group">
             <label for="website-description">Website Description</label>
-                <textarea ng-model="model.website.description"
+                <textarea ng-model="model.description"
                           rows="4"
                           id="website-description"
                           class="form-control"

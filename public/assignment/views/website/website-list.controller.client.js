@@ -7,11 +7,9 @@
         var vm = this;
         vm.userId = $routeParams.userId;
         vm.profile = profile;
-        vm.test = WebsiteService.websites;
-        vm.names=['Jani','Hege','Kai'];
+        vm.newWebsite = newWebsite;
 
-        names=['Jani','Hege','Kai'];
-
+        vm.web = WebsiteService.websites;
 
         function init() {
             vm.websites = WebsiteService.findWebsitesForUserId(vm.userId);
@@ -22,9 +20,12 @@
             $location.url("/profile/"+vm.userId);
         }
 
-        function MyCtrl($scope) {
-            vm.websites = WebsiteService.findWebsitesForUserId(vm.userId);
-            $scope.items = vm.websites;
+        function newWebsite() {
+            $location.url("/profile/"+vm.userId);
+        }
+
+        function  page(pageId) {
+            $location.url("/page/"+pageId);
         }
     }
 })();

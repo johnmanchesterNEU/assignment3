@@ -1,37 +1,56 @@
+page-list.view.client.html
+
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand pull-left">
             Websites
         </a>
-        <a href="#/user/{{model.userId}}/website/new"
+        <a ng-click=""
            class="navbar-text navbar-link pull-right hand">
                   <span class="glyphicon glyphicon-plus">
                   </span>
         </a>
     </div>
 </nav>
+{{model.test}}
 <div class="container">
     <ul class="list-group borderless">
-        <li ng-repeat="web in model.websites"
+        <li ng-repeat="web in hi"
             class="list-group-item">
-            <a href="#/user/{{web.developerId}}/website/{{web._id}}/page/">
+            <a href="../page/page-list.view.client.html">
+                {{web}}
+            </a>
+            <span class="pull-right">
+                <a href="website-edit.view.client.html" class="link">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-play"></span>
+                </a>
+            </span>
+        </li>
+        <li ng-repeat="object in model.websites"
+            class="list-group-item">
+            <a href="../page/page-list.view.client.html">
                 {{web.name}}
             </a>
             <span class="pull-right">
-                <a href="#/user/{{web.developerId}}/website/{{web._id}}" class="link">
+                <a href="website-edit.view.client.html" class="link">
                     <span class="glyphicon glyphicon-cog"></span>
                 </a>
-                <a>
+                <a href="#">
                     <span class="glyphicon glyphicon-play"></span>
                 </a>
             </span>
         </li>
     </ul>
 </div>
+{{model.websites}}
 <nav class="navbar navbar-default navbar-fixed-bottom hand">
     <div class="container-fluid">
         <a class="navbar-center pull-right"
-           href="#/profile/{{model.userId}}">
+           ng-click="model.profile()">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </div>
